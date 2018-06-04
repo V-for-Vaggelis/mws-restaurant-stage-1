@@ -279,3 +279,16 @@ select, option {
 	min-width: 48px;
 	padding: 1.5em;
 }
+
+header > nav {
+	padding-top: 7%;
+}
+
+header, main, #map-container, .filter-options, #restaurants-list {
+	width: 100%;
+}
+
+#restaurants-list {
+	display: flex;
+	flex-wrap: wrap;
+}
