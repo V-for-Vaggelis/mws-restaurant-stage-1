@@ -323,3 +323,18 @@ header, main, #map-container, .filter-options {
 		width: 40%;
 	}
 }
+
+@media screen and (min-width: 650px) {
+	.filter-options > select {
+		width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.filter-options > h2 {
+		font-size: 1.5em;
+	}
+	#restaurants-list > li {
+		width: 35%;
+
+	}
+}
