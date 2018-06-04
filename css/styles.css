@@ -335,6 +335,19 @@ header, main, #map-container, .filter-options {
 	}
 	#restaurants-list > li {
 		width: 35%;
+	}
+}
 
+@media screen and (min-width: 900px) {
+	header > nav {
+		padding-top: 5%;
+	}
+	.filter-options > select {
+		margin-left: 6%;
+		margin-right: 0;
+	}
+	.filter-options > h2 {
+		text-align: left;
+		margin-left: 6%;
 	}
 }
