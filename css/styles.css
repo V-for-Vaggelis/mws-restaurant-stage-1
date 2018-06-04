@@ -288,15 +288,15 @@ header, main, #map-container, .filter-options {
 	width: 100%;
 }
 
-#restaurants-list {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 #restaurants-list, .filter-options {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+#restaurants-list > li {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .filter-options {
@@ -316,4 +316,10 @@ header, main, #map-container, .filter-options {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media screen and (min-width: 450px) {
+	.filter-options > select {
+		width: 40%;
+	}
 }
