@@ -359,6 +359,9 @@ header, main, #map-container, .filter-options, #maincontent {
 	.inside #map-container {
 		margin-top: 175px;
 	}
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
 	#restaurant-container {
 		margin-top: 20px;
 		display: flex;
@@ -371,6 +374,18 @@ header, main, #map-container, .filter-options, #maincontent {
 	#res-details {
 		width: 40%;
 		margin-left: 5%;
+	}
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px) {
+	#reviews-container > ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#reviews-container li {
+		width: 35%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
