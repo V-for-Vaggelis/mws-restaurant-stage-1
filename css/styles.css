@@ -405,6 +405,25 @@ header, main, #map-container, .filter-options, #maincontent {
 	footer {
 		font-size: 2em;
 	}
+	#restaurant-container {
+		margin: 0;
+		order: -1;
+		width: 40%;
+		margin-top: 150px;
+	}
+	#reviews-container {
+		margin: 0;
+		order: 1;
+		width: 40%;
+	}
+	.inside #map-container {
+		/* margin-top: 0; */
+		width: 50%;
+		height: 100vh;
+	}
+	.inside #map {
+		height: 1200px;
+	}
 }
 
 @media screen and (min-width: 1000px) {
