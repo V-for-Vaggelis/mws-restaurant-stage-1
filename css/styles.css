@@ -381,7 +381,7 @@ header, main, #map-container, .filter-options, #maincontent {
 }
 
 @media screen and (min-width: 1200px) {
-	header, main, footer {
+	header, section, footer, main, #map {
 		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
