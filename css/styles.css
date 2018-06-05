@@ -199,11 +199,11 @@ nav h1 a {
 	background-color: #ccc;
 	height: 300px;
 	width: 100%;
-	}
+}
 .inside #footer {
 	bottom: 0;
 	width: 100%;
-	}
+}
 #restaurant-name {
 	color: #f18200;
 	font-family: Arial,sans-serif;
@@ -215,7 +215,7 @@ nav h1 a {
 	line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+	width: 100%;
 }
 #restaurant-address {
 	font-size: 12pt;
@@ -243,6 +243,7 @@ nav h1 a {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
 }
 
 #reviews-container h2 {
@@ -277,6 +278,7 @@ nav h1 a {
 #restaurant-hours td {
 	color: #666;
 }
+
 
 /* My additions for responiveness */
 select, option {
@@ -353,6 +355,22 @@ header, main, #map-container, .filter-options, #maincontent {
 	}
 	#restaurants-list > li {
 		width: 35%;
+	}
+	.inside #map-container {
+		margin-top: 175px;
+	}
+	#restaurant-container {
+		margin-top: 20px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#res-info {
+		width: 50%;
+		margin-right: 5%;
+	}
+	#res-details {
+		width: 40%;
+		margin-left: 5%;
 	}
 }
 
