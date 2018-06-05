@@ -295,10 +295,6 @@ header, main, #map-container, .filter-options, #maincontent {
 	width: 100%;
 }
 
-.inside header {
-	width: 100%;
-}
-
 #restaurants-list, .filter-options {
 	display: flex;
 	flex-wrap: wrap;
@@ -405,21 +401,16 @@ header, main, #map-container, .filter-options, #maincontent {
 	footer {
 		font-size: 2em;
 	}
-	#restaurant-container {
-		margin: 0;
+	#all-info-container {
+		margin-top: 145px;
+		width: 50%;
 		order: -1;
-		width: 40%;
-		margin-top: 150px;
-	}
-	#reviews-container {
-		margin: 0;
-		order: 1;
-		width: 40%;
 	}
 	.inside #map-container {
-		/* margin-top: 0; */
-		width: 50%;
-		height: 100vh;
+		/* margin-top: 145px; */
+		margin-right: 2%;
+		width: 48%;
+		height: 1200px;
 	}
 	.inside #map {
 		height: 1200px;
@@ -434,6 +425,15 @@ header, main, #map-container, .filter-options, #maincontent {
 
 @media screen and (min-width: 1200px) {
 	header, section, footer, main, #map {
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.inside header {
+		display: auto;
+		position: relative;
+	}
+	.inside {
 		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
