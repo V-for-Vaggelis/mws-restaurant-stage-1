@@ -159,7 +159,10 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  // It will look like a button, so let's add that role to it
   more.setAttribute("role", "button");
+  // Let's add a unique label to each of these buttons
+  more.setAttribute("aria-label", `More about ${restaurant.name}`);
   li.append(more)
 
   return li
