@@ -162,3 +162,17 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+/// Let's add descriptive title's to all the elements that go through focus
+addResponsiveAttributesToMap = () => {
+  let parentOfPanElement = document.querySelector(".gm-style");
+  let panElement = parentOfPanElement.firstChild;
+  panElement.setAttribute("title", "A map of the restaurant's neighborhood");
+  let frame = panElement.nextSibling;
+  frame.setAttribute("title", "The map with the selected restaurant's location being pointed");
+  }
+
+// Ensure that function gets called after map is created
+  window.addEventListener('load', function() {
+    addResponsiveAttributesToMap();
+  });
