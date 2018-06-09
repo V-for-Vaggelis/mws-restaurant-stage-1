@@ -141,6 +141,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  // Addin alt descriptions to the images
   image.alt = DBHelper.altDescriptionForImage(restaurant);
   li.append(image);
 
@@ -191,7 +192,15 @@ addResponsiveAttributesToMap = () => {
   frame.setAttribute("title", "The map with all the selected restaurants");
   }
 
-// Ensure that function gets called after map is created
+// Ensure that everything loaded before: 1) Adding titles to the map's elements, 2) Registering the service worker
   window.addEventListener('load', function() {
     addResponsiveAttributesToMap();
+    // If browser supports service workers, register sw.js
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('/sw.js').then(function(reg) {
+        console.log("Service worker loaded, scope:", reg.scope);
+      }).catch(function(err) {
+        console.log('Could not load service worker:', err);
+      });
+    }
   });
