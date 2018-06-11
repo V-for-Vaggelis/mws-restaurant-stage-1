@@ -11,66 +11,67 @@
 </head>
 
 <body class="inside">
-  <!-- Beginning header -->
-  <header>
-    <!-- Beginning nav -->
-    <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
-    </nav>
-    <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
-    </ul>
-    <!-- End breadcrumb -->
-    <!-- End nav -->
-  </header>
-  <!-- End header -->
+  <div id="wrapper">
+    <!-- Beginning header -->
+    <header>
+      <!-- Beginning nav -->
+      <nav>
+        <h1><a href="/">Restaurant Reviews</a></h1>
+      </nav>
+      <!-- Beginning breadcrumb -->
+      <ul id="breadcrumb" >
+        <li><a href="/">Home</a></li>
+      </ul>
+      <!-- End breadcrumb -->
+      <!-- End nav -->
+    </header>
+    <!-- End header -->
 
-  <!-- Beginning main -->
-  <main id="maincontent">
-    <!-- Beginning map -->
-    <section id="map-container">
-      <div id="map"></div>
-    </section>
-    <!-- End map -->
-    <!-- Beginning restaurant -->
-    <section id="all-info-container">
-      <section id="restaurant-container">
-        <div id="res-info">
-          <h1 id="restaurant-name"></h1>
-          <img id="restaurant-img">
-          <p id="restaurant-cuisine"></p>
-        </div>
-        <div id="res-details">
-          <p id="restaurant-address"></p>
-          <table id="restaurant-hours"></table>
-        </div>
+    <!-- Beginning main -->
+    <main id="maincontent">
+      <!-- Beginning map -->
+      <section id="map-container">
+        <div id="map"></div>
       </section>
-      <!-- end restaurant -->
-      <!-- Beginning reviews -->
-      <section id="reviews-container">
-        <ul id="reviews-list"></ul>
+      <!-- End map -->
+      <!-- Beginning restaurant -->
+      <section id="all-info-container">
+        <section id="restaurant-container">
+          <div id="res-info">
+            <h1 id="restaurant-name"></h1>
+            <img id="restaurant-img">
+            <p id="restaurant-cuisine"></p>
+          </div>
+          <div id="res-details">
+            <p id="restaurant-address"></p>
+            <table id="restaurant-hours"></table>
+          </div>
+        </section>
+        <!-- end restaurant -->
+        <!-- Beginning reviews -->
+        <section id="reviews-container">
+          <ul id="reviews-list"></ul>
+        </section>
+        <!-- End reviews -->
       </section>
-      <!-- End reviews -->
-    </section>
-  </main>
-  <!-- End main -->
+    </main>
+    <!-- End main -->
 
-  <!-- Beginning footer -->
-  <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
-  </footer>
-  <!-- End footer -->
+    <!-- Beginning footer -->
+    <footer id="footer">
+      Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    </footer>
+    <!-- End footer -->
 
-  <!-- Beginning scripts -->
-  <!-- Database helpers -->
-  <script type="text/javascript" src="js/dbhelper.js"></script>
-  <!-- Main javascript file -->
-  <script type="text/javascript" src="js/restaurant_info.js"></script>
-  <!-- Google Maps -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCENzVbJtz4UfWe1CN0Em6l5d7IXmNfAM8&libraries=places&callback=initMap"></script>
-  <!-- End scripts -->
-
+    <!-- Beginning scripts -->
+    <!-- Database helpers -->
+    <script type="text/javascript" src="js/dbhelper.js"></script>
+    <!-- Main javascript file -->
+    <script type="text/javascript" src="js/restaurant_info.js"></script>
+    <!-- Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCENzVbJtz4UfWe1CN0Em6l5d7IXmNfAM8&libraries=places&callback=initMap"></script>
+    <!-- End scripts -->
+  </div>
 </body>
 
 </html>
