@@ -192,7 +192,7 @@ addResponsiveAttributesToMap = () => {
   frame.setAttribute("title", "The map with all the selected restaurants");
   }
 
-/*
+
 // Ensure that everything loaded before: 1) Adding titles to the map's elements, 2) Registering the service worker
   window.addEventListener('load', function() {
     addResponsiveAttributesToMap();
@@ -205,4 +205,3 @@ addResponsiveAttributesToMap = () => {
       });
     }
   });
-*/
