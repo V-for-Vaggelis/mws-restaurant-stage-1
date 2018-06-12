@@ -1,28 +1,26 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews App-Stage 1
 
-## Project Overview: Stage 1
+The stage 1 of the restaurant reviews app, is about handling the responsiveness, accessibility and caching of an app. I was given an app
+that was barely functionable on a desktop device, and my job was to:
+<ol>
+<li>Make it look good on all devices using pure CSS</li>
+<li>Make it accessible usnig ARIA techniques and semantic elements</li>
+<li>Create a service worker for it, that ensures the app caches pages accessed online and can even show them offline after that</li>
+</ol>
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+The starting app was forked from <a href="https://github.com/udacity/mws-restaurant-stage-1">this repository</a>.
 
-### Specification
+## Code dependencies
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+<ul>
+<li><a href="https://code.google.com/archive/p/normalize-css/">Google's "normalize-css" stylesheet</a></li>
+<li><a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">Font-awesomne</a></li>
+</ul>
 
-### What do I do from here?
+## How to run
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+You can find the webpage <a href="https://v-for-vaggelis.github.io/mws-restaurant-stage-1/">here</a>. Alternatively you can clone the repository in your local machine, create a local server, and replace the port in the "dbhelper.js" file appropriately.
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+## Browser compatibility
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and make start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
-
-
-
+The site was only tested on Google chrome, but it should work on any browser, please report any issues.
