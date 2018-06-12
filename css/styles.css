@@ -4,7 +4,6 @@
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
-	color: #333;
 	line-height: 1.5;
 }
 body {
@@ -36,7 +35,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 #maincontent {
-	background-color: #f3f3f3;
+	background-color: #eee;
 }
 #footer {
 	background-color: #444;
@@ -68,7 +67,7 @@ nav h1 a {
 #breadcrumb {
 	padding: 10px 40px 16px;
 	list-style: none;
-	background-color: #eee;
+	background-color: rgb(210, 220, 200);
 	font-size: 17px;
 	margin: 0;
 	width: 100%
@@ -443,13 +442,13 @@ header, main, #map-container, .filter-options, #maincontent {
 }
 
 @media screen and (min-width: 1200px) {
-	header, section, footer, main, #map {
+	header, section, footer, main, #maincontent, #map {
 		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.inside #map-container {
-		margin-top: 0;
+		margin-top: 10px;
 	}
 	#all-info-container {
 		margin-top: 0;
