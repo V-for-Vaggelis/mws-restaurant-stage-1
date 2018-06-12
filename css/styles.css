@@ -349,6 +349,29 @@ header, main, #map-container, .filter-options, #maincontent {
 	border-radius: 5px 40px 20px 40px;
 }
 
+/* Skip link technique from https://webaim.org/techniques/css/invisiblecontent/ */
+#skip-link a, .inside #skip-link a {
+	font-size: 1.8em;
+	color: #0275d8;
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	top: auto;
+	overflow: hidden;
+}
+
+#skip-link a:focus, .inside #skip-link a:focus {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+#skip-link a:hover, .inside #skip-link a:hover {
+	text-decoration: underline;
+	color: #01447e;
+}
+
 @media screen and (min-width: 450px) {
 	.filter-options > select {
 		width: 40%;
@@ -429,7 +452,6 @@ header, main, #map-container, .filter-options, #maincontent {
 		order: -1;
 	}
 	.inside #map-container {
-		/* margin-top: 145px; */
 		margin-right: 2%;
 		width: 48%;
 		height: 1200px;
