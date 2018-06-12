@@ -127,7 +127,11 @@ createReviewHTML = (review) => {
   li.appendChild(date);
 
   const rating = document.createElement('p');
-  rating.innerHTML = `Rating: ${review.rating}`;
+  let stars = "";
+  for (let i=0; i<review.rating; i++) {
+    stars += '<i class="fa fa-star"></i>';
+  }
+  rating.innerHTML = "Rating: " + stars;
   li.appendChild(rating);
 
   const comments = document.createElement('p');
@@ -163,7 +167,7 @@ getParameterByName = (name, url) => {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-// Let's add descriptive title's to all the elements that go through focus
+// Add descriptive title's to all the elements that go through focus
 addResponsiveAttributesToMap = () => {
   let parentOfPanElement = document.querySelector(".gm-style");
   let panElement = parentOfPanElement.firstChild;

@@ -342,6 +342,10 @@ header, main, #map-container, .filter-options, #maincontent {
 	margin-right: auto;
 }
 
+.fa-star {
+	color: gold;
+}
+
 @media screen and (min-width: 450px) {
 	.filter-options > select {
 		width: 40%;
