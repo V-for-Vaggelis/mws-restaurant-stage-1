@@ -331,6 +331,17 @@ header, main, #map-container, .filter-options, #maincontent {
 	flex-wrap: wrap;
 }
 
+#restaurant-hours {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#restaurant-address {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 @media screen and (min-width: 450px) {
 	.filter-options > select {
 		width: 40%;
@@ -370,6 +381,7 @@ header, main, #map-container, .filter-options, #maincontent {
 	#res-details {
 		width: 40%;
 		margin-left: 5%;
+		padding-top: 10%;
 	}
 }
 
