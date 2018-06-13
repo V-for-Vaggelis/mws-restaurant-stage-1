@@ -1,4 +1,32 @@
 const cacheName = "restaurant-reviews-v1.0";
+/*const urlsToCache = [
+  '/',
+  'css/styles.css',
+  'data/restaurants.json',
+  'img/1.jpg',
+  'img/2.jpg',
+  'img/3.jpg',
+  'img/4.jpg',
+  'img/5.jpg',
+  'img/6.jpg',
+  'img/7.jpg',
+  'img/8.jpg',
+  'img/9.jpg',
+  'img/10.jpg',
+  'img/1small.jpg',
+  'img/2small.jpg',
+  'img/3small.jpg',
+  'img/4small.jpg',
+  'img/5small.jpg',
+  'img/6small.jpg',
+  'img/7small.jpg',
+  'img/8small.jpg',
+  'img/9small.jpg',
+  'img/10small.jpg',
+  'js/dbhelper.js',
+  'js/main.js',
+  'js/restaurant_info.js'
+];*/
 const urlsToCache = [
   '/mws-restaurant-stage-1//',
   '/mws-restaurant-stage-1/css/styles.css',
