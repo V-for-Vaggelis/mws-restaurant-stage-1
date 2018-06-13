@@ -1,4 +1,4 @@
-const cacheName = "restaurant-reviews-v1.0";
+/*const cacheName = "restaurant-reviews-v1.0";
 const urlsToCache = [
   '/',
   'css/styles.css',
@@ -36,3 +36,4 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+*/
