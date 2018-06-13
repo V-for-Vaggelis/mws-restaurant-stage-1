@@ -151,11 +151,13 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`https://github.com/V-for-Vaggelis/mws-restaurant-stage-1/tree/master/img/${restaurant.photograph}`);
+    // return `/img/${restaurant.photograph}`;
+    return (`https://github.com/V-for-Vaggelis/mws-restaurant-stage-1/img/${restaurant.photograph}`);
   }
 
   static imageSmallUrlForRestaurant(restaurant) {
-    return (`https://github.com/V-for-Vaggelis/mws-restaurant-stage-1/tree/master/img/${restaurant.photoSmall}`);
+    // return `/img/${restaurant.photoSmall}`;
+    return (`https://github.com/V-for-Vaggelis/mws-restaurant-stage-1/img/${restaurant.photoSmall}`);
   }
 
   /*
