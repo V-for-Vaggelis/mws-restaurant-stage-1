@@ -140,6 +140,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  // Load smaller images whenever we can have same UX
   let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   if ((w > 420 && w < 649) || w > 1220) {
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
@@ -198,7 +199,7 @@ addResponsiveAttributesToMap = () => {
   frame.setAttribute("title", "The map with all the selected restaurants");
 }
 
-/*
+
 // Ensure that everything loaded before: 1) Adding titles to the map's elements, 2) Registering the service worker
 window.addEventListener('load', function() {
 addResponsiveAttributesToMap();
@@ -211,4 +212,3 @@ console.log('Could not load service worker:', err);
 });
 }
 });
-*/
