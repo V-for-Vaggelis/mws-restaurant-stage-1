@@ -140,7 +140,13 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if ((w > 420 && w < 649) || w > 1220) {
+    image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  }
+  else {
+    image.src = DBHelper.imageSmallUrlForRestaurant(restaurant);
+  }
   // Addin alt descriptions to the images
   image.alt = DBHelper.altDescriptionForImage(restaurant);
   li.append(image);
@@ -190,19 +196,19 @@ addResponsiveAttributesToMap = () => {
   panElement.setAttribute("title", "A map of New York's center");
   let frame = panElement.nextSibling;
   frame.setAttribute("title", "The map with all the selected restaurants");
-  }
+}
 
 /*
 // Ensure that everything loaded before: 1) Adding titles to the map's elements, 2) Registering the service worker
-  window.addEventListener('load', function() {
-    addResponsiveAttributesToMap();
-    // If browser supports service workers, register sw.js
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('/sw.js').then(function(reg) {
-        console.log("Service worker loaded, scope:", reg.scope);
-      }).catch(function(err) {
-        console.log('Could not load service worker:', err);
-      });
-    }
-  });
+window.addEventListener('load', function() {
+addResponsiveAttributesToMap();
+// If browser supports service workers, register sw.js
+if (navigator.serviceWorker) {
+navigator.serviceWorker.register('/sw.js').then(function(reg) {
+console.log("Service worker loaded, scope:", reg.scope);
+}).catch(function(err) {
+console.log('Could not load service worker:', err);
+});
+}
+});
 */
