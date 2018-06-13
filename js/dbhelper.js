@@ -8,7 +8,7 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 2018 // Change this to your server port
+    const port = 2019 // Change this to your server port
     return `http://localhost:${port}/data/restaurants.json`;
     // return 'https://github.com/V-for-Vaggelis/mws-restaurant-stage-1/tree/master/data/restaurants.json';
   }
