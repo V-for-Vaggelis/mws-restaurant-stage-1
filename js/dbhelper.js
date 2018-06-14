@@ -165,6 +165,8 @@ class DBHelper {
   */
 
   static altDescriptionForImage(restaurant) {
+    // Next line of code to be used in stage 2 of the project, where my custom alt description in the json file won't be available
+    // return `A picture of ${restaurant.name}`;
     return restaurant.altImgDesc;
   }
 
