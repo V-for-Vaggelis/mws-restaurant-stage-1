@@ -137,20 +137,36 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-
+  // Let's create a picture element to load lighter images whne possible, like shown in : https://alligator.io/html/picture-element/
+  const pic = document.createElement('PICTURE');
+  let src = [];
+  for (let i=0; i<4; i++) {
+    let source = document.createElement('SOURCE');
+    src.push(source);
+  }
   const image = document.createElement('img');
+  let smallSource = DBHelper.imageSmallUrlForRestaurant(restaurant);
+  let bigSource = DBHelper.imageUrlForRestaurant(restaurant);
+  src[0].setAttribute("media", "screen and (max-width: 419px)");
+  src[0].setAttribute("srcset", smallSource);
+  src[1].setAttribute("media", "screen and (min-width: 420px) and (max-width: 649px)");
+  src[1].setAttribute("srcset", bigSource);
+  src[2].setAttribute("media", "screen and (min-width: 650px) and (max-width: 1119px)");
+  src[2].setAttribute("srcset", smallSource);
+  src[3].setAttribute("media", "screen and (min-width: 1220px)");
+  src[3].setAttribute("srcset", bigSource);
   image.className = 'restaurant-img';
-  // Load smaller images whenever we can have same UX
-  let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  if ((w > 420 && w < 649) || w > 1220) {
-    image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  }
-  else {
-    image.src = DBHelper.imageSmallUrlForRestaurant(restaurant);
-  }
+
+  // image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  // image.src = DBHelper.imageSmallUrlForRestaurant(restaurant);
   // Addin alt descriptions to the images
   image.alt = DBHelper.altDescriptionForImage(restaurant);
-  li.append(image);
+  image.src = bigSource;
+  for (let source of src)  {
+    pic.append(source);
+  }
+  pic.append(image);
+  li.append(pic);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;

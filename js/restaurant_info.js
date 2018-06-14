@@ -55,17 +55,34 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
-  const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
-  // Check user's vw to load small or large image
-  let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  if ((w > 390 && w < 619) || w > 750) {
-    image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  const pic = document.querySelector('.restaurant-img');
+  let src = [];
+  for (let i=0; i<4; i++) {
+    let source = document.createElement('SOURCE');
+    src.push(source);
   }
-  else {
-    image.src = DBHelper.imageSmallUrlForRestaurant(restaurant);
-  }
+  const image = document.createElement('img');
+  let smallSource = DBHelper.imageSmallUrlForRestaurant(restaurant);
+  let bigSource = DBHelper.imageUrlForRestaurant(restaurant);
+
+  src[0].setAttribute("media", "screen and (max-width: 389px)");
+  src[0].setAttribute("srcset", smallSource);
+  src[1].setAttribute("media", "screen and (min-width: 390px) and (max-width: 618px)");
+  src[1].setAttribute("srcset", bigSource);
+  src[2].setAttribute("media", "screen and (min-width: 619px) and (max-width: 749px)");
+  src[2].setAttribute("srcset", smallSource);
+  src[3].setAttribute("media", "screen and (min-width: 750px)");
+  src[3].setAttribute("srcset", bigSource);
+
+  image.setAttribute('id', 'restaurant-img');
+
+  // Adding alt descriptions to the images
   image.alt = DBHelper.altDescriptionForImage(restaurant);
+  image.src = bigSource;
+  for (let source of src)  {
+    pic.append(source);
+  }
+  pic.append(image);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
