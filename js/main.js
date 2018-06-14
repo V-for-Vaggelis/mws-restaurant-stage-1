@@ -215,17 +215,16 @@ addResponsiveAttributesToMap = () => {
   frame.setAttribute("title", "The map with all the selected restaurants");
 }
 
-/*
+
 // Ensure that everything loaded before: 1) Adding titles to the map's elements, 2) Registering the service worker
 window.addEventListener('load', function() {
-addResponsiveAttributesToMap();
-// If browser supports service workers, register sw.js
-if (navigator.serviceWorker) {
-navigator.serviceWorker.register('/sw.js').then(function(reg) {
-console.log("Service worker loaded, scope:", reg.scope);
-}).catch(function(err) {
-console.log('Could not load service worker:', err);
+  addResponsiveAttributesToMap();
+  // If browser supports service workers, register sw.js
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js').then(function(reg) {
+      console.log("Service worker loaded, scope:", reg.scope);
+    }).catch(function(err) {
+      console.log('Could not load service worker:', err);
+    });
+  }
 });
-}
-});
-*/

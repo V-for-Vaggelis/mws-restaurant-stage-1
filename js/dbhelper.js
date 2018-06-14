@@ -8,9 +8,9 @@ class DBHelper {
   * Change this to restaurants.json file location on your server.
   */
   static get DATABASE_URL() {
-    const port = 2025 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
-    // return 'https://raw.githubusercontent.com/V-for-Vaggelis/mws-restaurant-stage-1/master/data/restaurants.json';
+    /*const port = 8888 // Change this to your server port
+    return `http://localhost:${port}/data/restaurants.json`;*/
+    return 'https://raw.githubusercontent.com/V-for-Vaggelis/mws-restaurant-stage-1/master/data/restaurants.json';
   }
 
   /**
@@ -151,13 +151,13 @@ class DBHelper {
   * Restaurant image URL.
   */
   static imageUrlForRestaurant(restaurant) {
-    return `/img/${restaurant.photograph}`;
-    // return (`https://raw.githubusercontent.com/V-for-Vaggelis/mws-restaurant-stage-1/master/img/${restaurant.photograph}`);
+    // return `/img/${restaurant.photograph}`;
+    return (`https://raw.githubusercontent.com/V-for-Vaggelis/mws-restaurant-stage-1/master/img/${restaurant.photograph}`);
   }
 
   static imageSmallUrlForRestaurant(restaurant) {
-    return `/img/${restaurant.photoSmall}`;
-    // return (`https://raw.githubusercontent.com/V-for-Vaggelis/mws-restaurant-stage-1/master/img/${restaurant.photoSmall}`);
+    // return `/img/${restaurant.photoSmall}`;
+    return (`https://raw.githubusercontent.com/V-for-Vaggelis/mws-restaurant-stage-1/master/img/${restaurant.photoSmall}`);
   }
 
   /*

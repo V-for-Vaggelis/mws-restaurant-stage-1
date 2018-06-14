@@ -2,8 +2,8 @@ let restaurant;
 var map;
 
 /**
- * Initialize Google map, called from HTML.
- */
+* Initialize Google map, called from HTML.
+*/
 window.initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
@@ -21,8 +21,8 @@ window.initMap = () => {
 }
 
 /**
- * Get current restaurant from page URL.
- */
+* Get current restaurant from page URL.
+*/
 fetchRestaurantFromURL = (callback) => {
   if (self.restaurant) { // restaurant already fetched!
     callback(null, self.restaurant)
@@ -46,8 +46,8 @@ fetchRestaurantFromURL = (callback) => {
 }
 
 /**
- * Create restaurant HTML and add it to the webpage
- */
+* Create restaurant HTML and add it to the webpage
+*/
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
@@ -96,8 +96,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 }
 
 /**
- * Create restaurant operating hours HTML table and add it to the webpage.
- */
+* Create restaurant operating hours HTML table and add it to the webpage.
+*/
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
@@ -116,8 +116,8 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 }
 
 /**
- * Create all reviews HTML and add them to the webpage.
- */
+* Create all reviews HTML and add them to the webpage.
+*/
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h3');
@@ -138,8 +138,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 }
 
 /**
- * Create review HTML and add it to the webpage.
- */
+* Create review HTML and add it to the webpage.
+*/
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   li.tabIndex = "0";
@@ -166,8 +166,8 @@ createReviewHTML = (review) => {
 }
 
 /**
- * Add restaurant name to the breadcrumb navigation menu
- */
+* Add restaurant name to the breadcrumb navigation menu
+*/
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
@@ -177,18 +177,18 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
 }
 
 /**
- * Get a parameter by name from page URL.
- */
+* Get a parameter by name from page URL.
+*/
 getParameterByName = (name, url) => {
   if (!url)
-    url = window.location.href;
+  url = window.location.href;
   name = name.replace(/[\[\]]/g, '\\$&');
   const regex = new RegExp(`[?&]${name}(=([^&#]*)|&|#|$)`),
-    results = regex.exec(url);
+  results = regex.exec(url);
   if (!results)
-    return null;
+  return null;
   if (!results[2])
-    return '';
+  return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
@@ -199,9 +199,17 @@ addResponsiveAttributesToMap = () => {
   panElement.setAttribute("title", "A map of the restaurant's neighborhood");
   let frame = panElement.nextSibling;
   frame.setAttribute("title", "The map with the restaurant pointed");
-  }
+}
 
-// Ensure that function gets called after map is created
-  window.addEventListener('load', function() {
-    addResponsiveAttributesToMap();
-  });
+// Ensure that everything loaded before: 1) Adding titles to the map's elements, 2) Registering the service worker
+window.addEventListener('load', function() {
+  addResponsiveAttributesToMap();
+  // If browser supports service workers, register sw.js
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js').then(function(reg) {
+      console.log("Service worker loaded, scope:", reg.scope);
+    }).catch(function(err) {
+      console.log('Could not load service worker:', err);
+    });
+  }
+});
