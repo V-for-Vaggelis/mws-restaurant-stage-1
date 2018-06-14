@@ -165,9 +165,10 @@ class DBHelper {
   */
 
   static altDescriptionForImage(restaurant) {
-    // Next line of code to be used in stage 2 of the project, where my custom alt description in the json file won't be available
-    // return `A picture of ${restaurant.name}`;
-    return restaurant.altImgDesc;
+    // Not a descriptive alt sesc. but can also be used in stage 2 of the project cause doesn't require custom changes in the json file
+    return `A picture of ${restaurant.name}`;
+    // This is a descriptive alt attr. I added in the json file customly.
+    // return restaurant.altImgDesc;
   }
 
   /**

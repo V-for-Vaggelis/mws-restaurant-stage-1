@@ -147,6 +147,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   let smallSource = DBHelper.imageSmallUrlForRestaurant(restaurant);
   let bigSource = DBHelper.imageUrlForRestaurant(restaurant);
+
   src[0].setAttribute("media", "screen and (max-width: 419px)");
   src[0].setAttribute("srcset", smallSource);
   src[1].setAttribute("media", "screen and (min-width: 420px) and (max-width: 649px)");
@@ -155,11 +156,10 @@ createRestaurantHTML = (restaurant) => {
   src[2].setAttribute("srcset", smallSource);
   src[3].setAttribute("media", "screen and (min-width: 1220px)");
   src[3].setAttribute("srcset", bigSource);
+
   image.className = 'restaurant-img';
 
-  // image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  // image.src = DBHelper.imageSmallUrlForRestaurant(restaurant);
-  // Addin alt descriptions to the images
+  // Adding alt descriptions to the images
   image.alt = DBHelper.altDescriptionForImage(restaurant);
   image.src = bigSource;
   for (let source of src)  {
@@ -168,7 +168,7 @@ createRestaurantHTML = (restaurant) => {
   pic.append(image);
   li.append(pic);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
