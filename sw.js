@@ -1,5 +1,5 @@
-const cacheName = "restaurant-reviews-v1.0";
-/*const urlsToCache = [
+/*const cacheName = "restaurant-reviews-v1.0";
+const urlsToCache = [
   '/',
   'css/styles.css',
   'data/restaurants.json',
@@ -26,7 +26,7 @@ const cacheName = "restaurant-reviews-v1.0";
   'js/dbhelper.js',
   'js/main.js',
   'js/restaurant_info.js'
-];*/
+];
 const urlsToCache = [
   '/mws-restaurant-stage-1//',
   '/mws-restaurant-stage-1/css/styles.css',
@@ -74,3 +74,4 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+*/

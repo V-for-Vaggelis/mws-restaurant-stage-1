@@ -153,7 +153,8 @@ nav h1 a {
 	display: block;
 	margin: 0;
 	max-width: 100%;
-	min-height: 248px;
+	/* This min height was causing images to stretch and not keep original aspect ratio */
+	/* min-height: 248px; */
 	min-width: 100%;
 }
 #restaurants-list li h1 {
