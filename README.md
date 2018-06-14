@@ -19,7 +19,7 @@ The starting app was forked from <a href="https://github.com/udacity/mws-restaur
 
 ## How to run
 
-You can find the webpage <a href="https://v-for-vaggelis.github.io/mws-restaurant-stage-1/">here</a>. Alternatively you can clone the repository in your local machine and run the project in your local server. To do that, uncomment the code in lines: 11, 154, 159 of "dbhelper.js" file and in line 2 of "sw.js" file, and comment out the equivalent code below of each piece. Then all you have to do is run a local server. If you have the latest python version installed, just type: ```python -m http.server 8888``` on the app's repository. Then all you have to do is open your browser on ```localhost:8888```.
+You can find the webpage <a href="https://v-for-vaggelis.github.io/mws-restaurant-stage-1/">here</a>. Alternatively you can clone the repository in your local machine and run the project in your local server. To do that, uncomment the code in lines: 11, 154, 159 of "dbhelper.js" file, in line 2 of "sw.js" file, line 224 of "main.js" file and line 209 of "restaurant_info.js" file and comment out the equivalent code below of each piece. Then all you have to do is run a local server. If you have the latest python version installed, just type: ```python -m http.server 8888``` on the app's repository. Then all you have to do is open your browser on ```localhost:8888```.
 
 
 ## Browser compatibility

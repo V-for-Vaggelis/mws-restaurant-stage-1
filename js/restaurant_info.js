@@ -206,7 +206,8 @@ window.addEventListener('load', function() {
   addResponsiveAttributesToMap();
   // If browser supports service workers, register sw.js
   if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js').then(function(reg) {
+    // navigator.serviceWorker.register('/sw.js').then(function(reg) {
+    navigator.serviceWorker.register('/mws-restaurant-stage-1/sw.js').then(function(reg) {
       console.log("Service worker loaded, scope:", reg.scope);
     }).catch(function(err) {
       console.log('Could not load service worker:', err);
